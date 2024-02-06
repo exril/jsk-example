@@ -1,6 +1,5 @@
 import discord
 from discord.ext import commands, tasks
-from jishaku.cog import Jishaku  # Import the Jishaku cog
 
 # Create an instance of the bot
 
