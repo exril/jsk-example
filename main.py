@@ -9,6 +9,7 @@ tracemalloc.start()
 # Create an instance of the bot
 intents = discord.Intents.default()
 intents.members = True
+intents.message_content = True
 bot = commands.Bot(command_prefix='!', intents=intents)
 
 # Event to print a message when the bot is ready
