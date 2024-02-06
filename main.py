@@ -1,16 +1,17 @@
 import discord
-from discord.ext import commands, tasks
+from discord.ext import commands
+from jishaku.cog import Jishaku
 
 # Create an instance of the bot
-
-intents = discord.Intents.all()
+intents = discord.Intents.default()
 intents.members = True
-intents.message_content = True
-bot = commands.Bot(command_prefix='a!', intents=intents)
+bot = commands.Bot(command_prefix='!', intents=intents)
 
 # Load the Jishaku extension
 bot.load_extension('jishaku')
-bot.owner_ids = [847770840266833961]
+
+# Set the bot owner(s) ID(s)
+bot.owner_ids = {123456789012345678,}  # Replace with your owner ID(s)
 
 # Event to print a message when the bot is ready
 @bot.event
@@ -24,4 +25,4 @@ async def hello(ctx):
     await ctx.send(f'Hello, {ctx.author.mention}!')
 
 # Run the bot with your token
-bot.run('MTIwNDIzMzMwNjg5MjQwMjY5OA.G-a1N1.UmYKAo_6M2ldB0ZjC1mV_AdRFqSrAeTX4yyu4A')
+bot.run('MTIwNDIzMzMwNjg5MjQwMjY5OA.G3XaQp.9JccFarIEzWBcdC0ol0eNxC2fwSwZ7JUNfXRx0')
