@@ -3,10 +3,11 @@ from discord.ext import commands, tasks
 from jishaku.cog import Jishaku  # Import the Jishaku cog
 
 # Create an instance of the bot
-bot = commands.Bot(command_prefix='a!', intents=intents)
+
 intents = discord.Intents.all()
 intents.members = True
 intents.message_content = True
+bot = commands.Bot(command_prefix='a!', intents=intents)
 
 # Load the Jishaku extension
 bot.load_extension('jishaku')
