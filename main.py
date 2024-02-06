@@ -21,4 +21,4 @@ async def hello(ctx):
     await ctx.send(f'Hello, {ctx.author.mention}!')
 
 # Run the bot with your token
-bot.run('YOUR_BOT_TOKEN')
+bot.run('MTIwNDIzMzMwNjg5MjQwMjY5OA.G-a1N1.UmYKAo_6M2ldB0ZjC1mV_AdRFqSrAeTX4yyu4A')
