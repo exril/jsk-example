@@ -23,4 +23,4 @@ bot.owner_ids = {847770840266833961}
 async def hello(ctx):
     await ctx.send(f'https://awarebot.pro/invite')
 
-bot.run('MTIwNDIzMzMwNjg5MjQwMjY5OA.G3XaQp.9JccFarIEzWBcdC0ol0eNxC2fwSwZ7JUNfXRx0')
+bot.run('')
