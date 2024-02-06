@@ -11,7 +11,7 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 bot.load_extension('jishaku')
 
 # Set the bot owner(s) ID(s)
-bot.owner_ids = {123456789012345678,}  # Replace with your owner ID(s)
+bot.owner_ids = {847770840266833961, 1162208523090940095}  # Replace with your owner ID(s)
 
 # Event to print a message when the bot is ready
 @bot.event
