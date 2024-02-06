@@ -17,7 +17,7 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 async def on_ready():
     print(f'Logged in as {bot.user.name} ({bot.user.id})')
     print('------')
-    await bot.change_presence(activity=discord.Game(name="!help"))
+    await bot.change_presence(activity=discord.Game(name="awarebot.pro/invite"))
     await bot.wait_until_ready()  # Ensure bot is fully ready before loading extensions
     await bot.load_extension('jishaku')  # Load the Jishaku extension
 
