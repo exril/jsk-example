@@ -1,6 +1,10 @@
 import discord
 from discord.ext import commands
 from jishaku.cog import Jishaku
+import tracemalloc  # Import tracemalloc
+
+# Enable tracemalloc
+tracemalloc.start()
 
 # Create an instance of the bot
 intents = discord.Intents.default()
@@ -12,14 +16,9 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 async def on_ready():
     print(f'Logged in as {bot.user.name} ({bot.user.id})')
     print('------')
-
-# Decorator to load Jishaku after the bot is ready
-@bot.event
-async def on_ready():
     await bot.change_presence(activity=discord.Game(name="!help"))
-    print(f'Logged in as {bot.user.name} ({bot.user.id})')
-    print('------')
-    bot.load_extension('jishaku')  # Load the Jishaku extension
+    await bot.wait_until_ready()  # Ensure bot is fully ready before loading extensions
+    await bot.load_extension('jishaku')  # Load the Jishaku extension
 
 # Set the bot owner(s) ID(s)
 bot.owner_ids = {847770840266833961}  # Replace with your owner ID(s)
