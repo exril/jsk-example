@@ -7,17 +7,16 @@ intents = discord.Intents.default()
 intents.members = True
 bot = commands.Bot(command_prefix='!', intents=intents)
 
-# Load the Jishaku extension
-bot.load_extension('jishaku')
-
-# Set the bot owner(s) ID(s)
-bot.owner_ids = {847770840266833961, 1162208523090940095}  # Replace with your owner ID(s)
-
 # Event to print a message when the bot is ready
 @bot.event
 async def on_ready():
     print(f'Logged in as {bot.user.name} ({bot.user.id})')
     print('------')
+    await bot.wait_until_ready()  # Wait until the bot is fully ready before loading extensions
+    bot.load_extension('jishaku')  # Load the Jishaku extension
+
+# Set the bot owner(s) ID(s)
+bot.owner_ids = {847770840266833961}  # Replace with your owner ID(s)
 
 # Simple command to respond with a greeting
 @bot.command(name='hello', help='Responds with a greeting')
