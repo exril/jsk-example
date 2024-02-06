@@ -19,7 +19,7 @@ async def on_ready():
     await bot.load_extension('jishaku') 
 bot.owner_ids = {847770840266833961} 
 
-@bot.command(name='help', help='Responds with a greeting')
+@bot.command(name='web', help='Responds with a greeting')
 async def hello(ctx):
     await ctx.send(f'https://awarebot.pro/invite')
 
